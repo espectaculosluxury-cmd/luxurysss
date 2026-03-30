@@ -936,7 +936,7 @@ $html = <<<'HTML'
 
 <!-- ════════════ JSON-LD SCHEMA ════════════ -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://espectaculosluxury.com/#organization","name":"Espect&#225;culos Luxury","url":"https://espectaculosluxury.com","telephone":"+34695858978","priceRange":"&#8364;&#8364;","image":"https://espectaculosluxury.com/wp-content/uploads/2026/03/bcn-stripper-01.jpg","description":"Agencia l&#237;der en shows de stripper a domicilio en Barcelona. M&#225;s de 10 a&#241;os de experiencia y +5.000 eventos.","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Catalu&#241;a","addressCountry":"ES"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"312","bestRating":"5"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&#191;Cu&#225;nto cuesta contratar un stripper en Barcelona?","acceptedAnswer":{"@type":"Answer","text":"Los shows empiezan desde 180&#8364; (Show Integral). Show L&#233;sbico D&#250;o desde 330&#8364;, Show con Juguete Er&#243;tico desde 300&#8364;, Camarera Sexy desde 180&#8364;/hora, Pack desde 380&#8364;."}},{"@type":"Question","name":"&#191;Cu&#225;nto tardan en confirmar?","acceptedAnswer":{"@type":"Answer","text":"Confirmamos en menos de 2 horas por WhatsApp o tel&#233;fono."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://espectaculosluxury.com/#organization","name":"Espect&#225;culos Luxury","url":"https://espectaculosluxury.com","telephone":"+34695858978","priceRange":"&#8364;&#8364;","image":"https://espectaculosluxury.com/wp-content/uploads/2026/03/bcn-stripper-01.jpg","description":"Agencia l&#237;der en shows de stripper en Barcelona. M&#225;s de 15 a&#241;os de experiencia y +2.000 eventos realizados en Catalu&#241;a.","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Catalu&#241;a","addressCountry":"ES"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"312","bestRating":"5"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&#191;Cu&#225;nto cuesta contratar un stripper en Barcelona?","acceptedAnswer":{"@type":"Answer","text":"Los shows empiezan desde 180&#8364; (Show Integral). Show L&#233;sbico D&#250;o desde 330&#8364;, Show con Juguete Er&#243;tico desde 300&#8364;, Camarera Sexy desde 180&#8364;/hora, Pack desde 380&#8364;."}},{"@type":"Question","name":"&#191;Cu&#225;nto tardan en confirmar?","acceptedAnswer":{"@type":"Answer","text":"Confirmamos en menos de 2 horas por WhatsApp o tel&#233;fono."}}]}]}
 </script>
 
 <!-- ════════════ HERO FULL-BLEED ════════════ -->
@@ -975,7 +975,7 @@ $html = <<<'HTML'
       </div>
 
       <div class="lx9-trust">
-        <span class="lx9-trust-item">&#11088;&#11088;&#11088;&#11088;&#11088;&nbsp; +5.000 fiestas</span>
+        <span class="lx9-trust-item">&#11088;&#11088;&#11088;&#11088;&#11088;&nbsp; +2.000 fiestas</span>
         <span class="lx9-trust-item">&#128506;&nbsp; Toda Barcelona y Catalu&#241;a</span>
         <span class="lx9-trust-item">&#9889;&nbsp; Confirmaci&#243;n en 2h</span>
         <span class="lx9-trust-item">&#128274;&nbsp; 100% Discreto</span>
@@ -997,7 +997,7 @@ $html = <<<'HTML'
         <span class="lx9-goldbar"></span>
       </div>
       <div class="lx9-prose">
-        <p>Contratar un <strong>stripper en Barcelona</strong> para una <strong>despedida de soltera</strong>, cumplea&#241;os o fiesta privada en 2026 es m&#225;s f&#225;cil que nunca con <strong>Espect&#225;culos Luxury</strong>. Somos la agencia con m&#225;s experiencia de Catalu&#241;a: m&#225;s de 10 a&#241;os organizando shows de striptease profesionales en <strong>domicilios, hoteles, apartamentos tur&#237;sticos, villas con piscina y salas privadas</strong> de Barcelona y toda el &#225;rea metropolitana.</p>
+        <p>Contratar un <strong>stripper en Barcelona</strong> para una <strong>despedida de soltera</strong>, cumplea&#241;os o fiesta privada en 2026 es m&#225;s f&#225;cil que nunca con <strong>Espect&#225;culos Luxury</strong>. Somos la agencia con m&#225;s experiencia de Catalu&#241;a: m&#225;s de 15 a&#241;os organizando shows de striptease profesionales en <strong>domicilios, hoteles, apartamentos tur&#237;sticos, villas con piscina y salas privadas</strong> de Barcelona y toda el &#225;rea metropolitana.</p>
         <p>Nuestro cat&#225;logo 2026 incluye el <strong>Show Integral desde 180&euro;</strong>, el espectacular <strong>Show L&#233;sbico D&#250;o desde 330&euro;</strong>, el <strong>Show con Juguete Er&#243;tico desde 300&euro;</strong>, la <strong>Camarera Sexy desde 180&euro;/hora</strong> y el popular <strong>Pack Camarera + Show desde 380&euro;</strong>. Todas nuestras artistas est&#225;n verificadas, son 100% profesionales y ofrecen la m&#225;xima discreci&#243;n. Confirmamos tu reserva en <strong>menos de 2 horas</strong>.</p>
       </div>
     </div>
@@ -1103,17 +1103,35 @@ $html = <<<'HTML'
       </div>
       <div class="lx9-muni-grid">
         <a href="https://espectaculosluxury.com/stripper-barcelona/" class="lx9-muni"><span class="lx9-muni-icon">&#127968;</span><span class="lx9-muni-name">Barcelona Ciudad</span><span class="lx9-muni-dist">Eixample, Gr&#224;cia, Gothic</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127748;</span><span class="lx9-muni-name">Hospitalet</span><span class="lx9-muni-dist">5 km del centro</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127751;</span><span class="lx9-muni-name">Badalona</span><span class="lx9-muni-dist">8 km del centro</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127978;</span><span class="lx9-muni-name">Cornell&#224;</span><span class="lx9-muni-dist">10 km del centro</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127969;</span><span class="lx9-muni-name">Sant Cugat</span><span class="lx9-muni-dist">18 km del centro</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127749;</span><span class="lx9-muni-name">Sabadell</span><span class="lx9-muni-dist">22 km del centro</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127751;</span><span class="lx9-muni-name">Terrassa</span><span class="lx9-muni-dist">30 km del centro</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127958;</span><span class="lx9-muni-name">Sitges</span><span class="lx9-muni-dist">35 km &middot; Costa</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127754;</span><span class="lx9-muni-name">Castelldefels</span><span class="lx9-muni-dist">25 km &middot; Playa</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127962;</span><span class="lx9-muni-name">Matar&#243;</span><span class="lx9-muni-dist">30 km &middot; Maresme</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127970;</span><span class="lx9-muni-name">Santa Coloma</span><span class="lx9-muni-dist">10 km del centro</span></a>
-        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-a-domicilio-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#128506;</span><span class="lx9-muni-name">+60 km cobertura</span><span class="lx9-muni-dist">Consulta disponibilidad</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-hospitalet-de-llobregat-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127748;</span><span class="lx9-muni-name">Hospitalet</span><span class="lx9-muni-dist">5 km del centro</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-badalona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127751;</span><span class="lx9-muni-name">Badalona</span><span class="lx9-muni-dist">8 km del centro</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-cornella-de-llobregat-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127978;</span><span class="lx9-muni-name">Cornell&#224;</span><span class="lx9-muni-dist">10 km del centro</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-sant-cugat-del-valles-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127969;</span><span class="lx9-muni-name">Sant Cugat</span><span class="lx9-muni-dist">18 km del centro</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-sabadell-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127749;</span><span class="lx9-muni-name">Sabadell</span><span class="lx9-muni-dist">22 km del centro</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-terrassa-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127751;</span><span class="lx9-muni-name">Terrassa</span><span class="lx9-muni-dist">30 km del centro</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-sitges-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127958;</span><span class="lx9-muni-name">Sitges</span><span class="lx9-muni-dist">35 km &middot; Costa</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-castelldefels-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127754;</span><span class="lx9-muni-name">Castelldefels</span><span class="lx9-muni-dist">25 km &middot; Playa</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-mataro-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127962;</span><span class="lx9-muni-name">Matar&#243;</span><span class="lx9-muni-dist">30 km &middot; Maresme</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-santa-coloma-de-gramenet-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#127970;</span><span class="lx9-muni-name">Santa Coloma</span><span class="lx9-muni-dist">10 km del centro</span></a>
+        <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-area-metropolitana-barcelona-producto/" class="lx9-muni"><span class="lx9-muni-icon">&#128506;</span><span class="lx9-muni-name">+60 km cobertura</span><span class="lx9-muni-dist">Consulta disponibilidad</span></a>
+      </div>
+
+      <!-- ── Interlinks de zonas ── -->
+      <div style="margin-top:40px;padding-top:32px;border-top:1px solid #e8e0d0;">
+        <p class="lx9-eyebrow" style="margin-bottom:18px">&#128205; Zonas de servicio relacionadas</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px 14px;font-size:0.85rem;">
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-hospitalet-de-llobregat-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Hospitalet</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-badalona-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Badalona</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-cornella-de-llobregat-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Cornell&#224;</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-sant-cugat-del-valles-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Sant Cugat</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-sabadell-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Sabadell</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-terrassa-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Terrassa</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-sitges-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Sitges</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-castelldefels-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Castelldefels</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-mataro-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Matar&#243;</a>
+          <a href="https://espectaculosluxury.com/contratar-stripper-para-fiestas-y-despedidas-en-barcelona/stripper-santa-coloma-de-gramenet-producto/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#128205; Stripper Santa Coloma</a>
+          <a href="https://espectaculosluxury.com/stripper-barcelona/" style="color:#c8a96e;text-decoration:none;padding:6px 14px;border:1px solid #c8a96e;border-radius:20px;">&#127968; Stripper Barcelona Ciudad</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1133,13 +1151,13 @@ $html = <<<'HTML'
       </div>
       <ul class="lx9-checklist">
         <li>&#127968; Domicilios particulares en cualquier barrio de Barcelona</li>
-        <li>&#127968; Hotel W, Hotel Arts, NH Collection, Meli&#225; Diagonal, Hyatt Regency</li>
+        <li>&#127968; <a href="https://www.hotelwbarcelona.com/" rel="nofollow noopener" target="_blank">Hotel W</a>, <a href="https://www.hotelartsbarcelona.com/" rel="nofollow noopener" target="_blank">Hotel Arts</a>, <a href="https://www.nh-hotels.com/es/hotels/nh-collection-barcelona-gran-hotel-calderon" rel="nofollow noopener" target="_blank">NH Collection</a>, <a href="https://www.melia.com/es/hoteles/espana/barcelona/melia-barcelona" rel="nofollow noopener" target="_blank">Meli&#225; Diagonal</a>, <a href="https://www.hyatt.com/es-ES/hotel/spain/hyatt-regency-barcelona-tower" rel="nofollow noopener" target="_blank">Hyatt Regency</a></li>
         <li>&#127745; Apartamentos tur&#237;sticos y Airbnb en Gothic, Born, Eixample y Barceloneta</li>
         <li>&#127958; Villas con piscina en Sitges, Castelldefels, Gav&#224; y Garraf</li>
         <li>&#128676; Yates y barcos en Puerto Ol&#237;mpico y Port Vell de Barcelona</li>
         <li>&#127881; Salas privadas alquiladas y locales de fiestas en Barcelona</li>
         <li>&#127970; Eventos corporativos y after-work en el 22@ y Diagonal</li>
-        <li>&#127754; Beach clubs: Shoko, Opium Beach, Barts Beachclub (verano)</li>
+        <li>&#127754; Beach clubs: <a href="https://www.shoko.biz/" rel="nofollow noopener" target="_blank">Shoko</a>, <a href="https://www.opiummar.com/" rel="nofollow noopener" target="_blank">Opium Beach</a>, Barts Beachclub (verano)</li>
       </ul>
 
       <h3 class="lx9-sec-h3">&#127769; Pubs y Discotecas de Moda en Barcelona 2026</h3>
@@ -1149,18 +1167,18 @@ $html = <<<'HTML'
         <table class="lx9-tbl">
           <thead><tr><th>Local</th><th>Zona</th><th>Tipo</th></tr></thead>
           <tbody>
-            <tr><td><strong>Pacha Barcelona</strong></td><td>Port Ol&#237;mpic</td><td><span class="lx9-chip">Discoteca</span></td></tr>
-            <tr><td><strong>Opium Mar</strong></td><td>Barceloneta</td><td><span class="lx9-chip">Club + Beach</span></td></tr>
-            <tr><td><strong>Razzmatazz</strong></td><td>Poblenou</td><td><span class="lx9-chip">Sala de conciertos</span></td></tr>
-            <tr><td><strong>Sala Apolo</strong></td><td>Paral&#183;lel</td><td><span class="lx9-chip">Sala cl&#225;sica</span></td></tr>
-            <tr><td><strong>Sutton Club</strong></td><td>Diagonal</td><td><span class="lx9-chip">Club VIP</span></td></tr>
-            <tr><td><strong>Bling Bling</strong></td><td>Sant Gervasi</td><td><span class="lx9-chip">Discoteca luxury</span></td></tr>
-            <tr><td><strong>El Nacional</strong></td><td>Passeig de Gr&#224;cia</td><td><span class="lx9-chip">Gastrobar VIP</span></td></tr>
-            <tr><td><strong>Moog</strong></td><td>Arc del Teatre</td><td><span class="lx9-chip">Club electr&#243;nico</span></td></tr>
-            <tr><td><strong>Jamboree</strong></td><td>Pla&#231;a Reial</td><td><span class="lx9-chip">Jazz / Club</span></td></tr>
-            <tr><td><strong>Mirablau</strong></td><td>Tibidabo</td><td><span class="lx9-chip">Terraza con vistas</span></td></tr>
-            <tr><td><strong>Shoko</strong></td><td>Port Ol&#237;mpic</td><td><span class="lx9-chip">Beach Club</span></td></tr>
-            <tr><td><strong>Club Catwalk</strong></td><td>Port Ol&#237;mpic</td><td><span class="lx9-chip">Discoteca</span></td></tr>
+            <tr><td><a href="https://www.pachab.com/" rel="nofollow noopener" target="_blank"><strong>Pacha Barcelona</strong></a></td><td>Port Ol&#237;mpic</td><td><span class="lx9-chip">Discoteca</span></td></tr>
+            <tr><td><a href="https://www.opiummar.com/" rel="nofollow noopener" target="_blank"><strong>Opium Mar</strong></a></td><td>Barceloneta</td><td><span class="lx9-chip">Club + Beach</span></td></tr>
+            <tr><td><a href="https://www.razzmatazz.es/" rel="nofollow noopener" target="_blank"><strong>Razzmatazz</strong></a></td><td>Poblenou</td><td><span class="lx9-chip">Sala de conciertos</span></td></tr>
+            <tr><td><a href="https://www.sala-apolo.com/" rel="nofollow noopener" target="_blank"><strong>Sala Apolo</strong></a></td><td>Paral&#183;lel</td><td><span class="lx9-chip">Sala cl&#225;sica</span></td></tr>
+            <tr><td><a href="https://www.suttonbarcelona.com/" rel="nofollow noopener" target="_blank"><strong>Sutton Club</strong></a></td><td>Diagonal</td><td><span class="lx9-chip">Club VIP</span></td></tr>
+            <tr><td><a href="https://blingbling.es/" rel="nofollow noopener" target="_blank"><strong>Bling Bling</strong></a></td><td>Sant Gervasi</td><td><span class="lx9-chip">Discoteca luxury</span></td></tr>
+            <tr><td><a href="https://www.elnacional.cat/" rel="nofollow noopener" target="_blank"><strong>El Nacional</strong></a></td><td>Passeig de Gr&#224;cia</td><td><span class="lx9-chip">Gastrobar VIP</span></td></tr>
+            <tr><td><a href="https://www.masimas.com/moog" rel="nofollow noopener" target="_blank"><strong>Moog</strong></a></td><td>Arc del Teatre</td><td><span class="lx9-chip">Club electr&#243;nico</span></td></tr>
+            <tr><td><a href="https://www.masimas.com/jamboree" rel="nofollow noopener" target="_blank"><strong>Jamboree</strong></a></td><td>Pla&#231;a Reial</td><td><span class="lx9-chip">Jazz / Club</span></td></tr>
+            <tr><td><a href="https://www.mirablau.es/" rel="nofollow noopener" target="_blank"><strong>Mirablau</strong></a></td><td>Tibidabo</td><td><span class="lx9-chip">Terraza con vistas</span></td></tr>
+            <tr><td><a href="https://www.shoko.biz/" rel="nofollow noopener" target="_blank"><strong>Shoko</strong></a></td><td>Port Ol&#237;mpic</td><td><span class="lx9-chip">Beach Club</span></td></tr>
+            <tr><td><a href="https://www.clubcatwalk.net/" rel="nofollow noopener" target="_blank"><strong>Club Catwalk</strong></a></td><td>Port Ol&#237;mpic</td><td><span class="lx9-chip">Discoteca</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1249,7 +1267,7 @@ $html = <<<'HTML'
         <span class="lx9-eyebrow">Opiniones reales</span>
         <h2 class="lx9-title">Lo que Dicen Nuestros Clientes</h2>
         <span class="lx9-goldbar"></span>
-        <p class="lx9-subtitle">+5.000 eventos &middot; valoraci&#243;n media 5 sobre 5</p>
+        <p class="lx9-subtitle">+2.000 eventos &middot; valoraci&#243;n media 5 sobre 5</p>
       </div>
       <div class="lx9-reviews">
         <div class="lx9-review">
@@ -1291,11 +1309,11 @@ $html = <<<'HTML'
       </div>
       <div class="lx9-stats">
         <div class="lx9-stat">
-          <span class="lx9-stat-num">+10</span>
+          <span class="lx9-stat-num">+15</span>
           <span class="lx9-stat-label">A&#241;os de experiencia en Barcelona</span>
         </div>
         <div class="lx9-stat">
-          <span class="lx9-stat-num">+5.000</span>
+          <span class="lx9-stat-num">+2.000</span>
           <span class="lx9-stat-label">Eventos realizados en Catalu&#241;a</span>
         </div>
         <div class="lx9-stat">
@@ -1317,7 +1335,7 @@ $html = <<<'HTML'
         <li>El cat&#225;logo de artistas m&#225;s amplio de Barcelona y Catalu&#241;a</li>
         <li>Shows personalizables seg&#250;n el tipo de evento y preferencias</li>
         <li>Pago seguro, f&#225;cil y discreto por m&#250;ltiples m&#233;todos</li>
-        <li>M&#225;s de 10 a&#241;os de experiencia y +5.000 eventos en Barcelona</li>
+        <li>M&#225;s de 15 a&#241;os de experiencia y +2.000 eventos en Barcelona</li>
       </ul>
     </div>
   </div>
