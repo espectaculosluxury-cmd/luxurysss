@@ -226,6 +226,12 @@ ob_start();
     <a href="<?php echo esc_url($wa); ?>" class="lxp-btn-gold">&#128242;&nbsp; Reservar por WhatsApp</a>
     <a href="<?php echo esc_url($tel); ?>" class="lxp-btn-out">&#128222;&nbsp; Llamar ahora</a>
   </div>
+  <?php
+  // ── "También actuamos en otras ciudades" — bloque dinámico (provincias) ──
+  if ( function_exists('lux_other_cities_block') ) {
+      echo lux_other_cities_block( $prov_slug, 'dark' );
+  }
+  ?>
 </div>
 
 <?php echo lux_product_interlinks( $base_url, $localities, $key, $prov, $landing_url ); ?>

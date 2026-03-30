@@ -773,9 +773,14 @@ ob_start();
       <a href="<?php echo esc_url($tel); ?>" class="lx9-btn lx9-btn-outline" style="padding:22px 48px;font-size:1.05rem">&#128222;&nbsp; Llamar al <?php echo esc_html($num); ?></a>
     </div>
     <p class="lx9-cta-footer">
-      Espect&#225;culos Luxury &middot; <?php echo esc_html($prov); ?> y provincia &middot;
-      <a href="<?php echo esc_url($site_url . '/stripper-barcelona/'); ?>">Ver tambi&#233;n: Stripper en Barcelona</a>
+      Espect&#225;culos Luxury &middot; <?php echo esc_html($prov); ?> y provincia &middot; Disponibles 24h
     </p>
+    <?php
+    // ── "También actuamos en otras ciudades" — bloque dinámico ──────────────
+    if ( function_exists('lux_other_cities_block') ) {
+        echo lux_other_cities_block( $prov_slug, 'dark' );
+    }
+    ?>
   </div>
 </div>
 

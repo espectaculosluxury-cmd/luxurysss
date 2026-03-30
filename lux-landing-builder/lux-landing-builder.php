@@ -3,7 +3,7 @@
  * Plugin Name:  Lux Landing Builder
  * Plugin URI:   https://espectaculosluxury.com
  * Description:  Plantilla maestra para landing pages de provincia y productos de localidad. Usa el deployer para crear nuevas provincias a partir del patrón Barcelona 2026.
- * Version:      1.0.0
+ * Version:      1.1.0
  * Author:       Espectáculos Luxury
  * Author URI:   https://espectaculosluxury.com
  * Text Domain:  lux-landing-builder
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'LUX_BUILDER_VERSION', '1.0.0' );
+define( 'LUX_BUILDER_VERSION', '1.1.0' );
 define( 'LUX_BUILDER_DIR',     plugin_dir_path( __FILE__ ) );
 define( 'LUX_BUILDER_URL',     plugin_dir_url( __FILE__ ) );
 
@@ -173,6 +173,68 @@ function lux_builder_admin_page() {
                 <tr><td>Pull Request</td><td><a href="https://github.com/espectaculosluxury-cmd/luxurysss/pull/1" target="_blank">PR #1 — feat(barcelona)</a></td></tr>
             </tbody>
         </table>
+
+        <hr>
+        <h2>🗺️ Índice de Provincias — "También actuamos en otras ciudades"</h2>
+        <p style="color:#555;max-width:700px">
+            Esta lista se muestra automáticamente al final del CTA de <strong>cada landing y producto</strong>
+            como la sección <em>"También actuamos en otras ciudades"</em>.
+            Se actualiza sola cada vez que haces un deploy. También puedes añadir o borrar entradas manualmente aquí.
+        </p>
+
+        <?php
+        $province_index = lux_get_all_provinces();
+        ?>
+
+        <?php if ( ! empty($province_index) ) : ?>
+        <table class="widefat fixed" style="max-width:860px;margin-bottom:20px">
+            <thead><tr><th style="width:25%">Nombre</th><th style="width:20%">Slug</th><th>URL Landing</th><th style="width:80px">Borrar</th></tr></thead>
+            <tbody>
+            <?php foreach ( $province_index as $p ) : ?>
+                <tr>
+                    <td><?php echo esc_html($p['name']); ?></td>
+                    <td><code><?php echo esc_html($p['slug']); ?></code></td>
+                    <td><a href="<?php echo esc_url($p['url']); ?>" target="_blank"><?php echo esc_html($p['url']); ?></a></td>
+                    <td>
+                        <form method="post" style="margin:0" onsubmit="return confirm('¿Eliminar <?php echo esc_attr($p['name']); ?>?')">
+                            <?php wp_nonce_field('lux_province_index_action'); ?>
+                            <input type="hidden" name="lux_province_action" value="remove">
+                            <input type="hidden" name="pi_slug_remove" value="<?php echo esc_attr($p['slug']); ?>">
+                            <button type="submit" class="button button-small" style="color:#cc1818;border-color:#cc1818">✕</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+        <?php else : ?>
+            <p style="color:#999"><em>Sin provincias registradas aún. Se crearán automáticamente con cada deploy.</em></p>
+        <?php endif; ?>
+
+        <h3>➕ Añadir provincia manualmente</h3>
+        <form method="post" style="max-width:860px;background:#f9f6f0;padding:16px 20px;border-radius:6px;border:1px solid #e0d8c8">
+            <?php wp_nonce_field('lux_province_index_action'); ?>
+            <input type="hidden" name="lux_province_action" value="add">
+            <table class="form-table" role="presentation" style="margin:0">
+                <tr>
+                    <th style="width:160px"><label for="pi_name">Nombre</label></th>
+                    <td><input type="text" id="pi_name" name="pi_name" class="regular-text" placeholder="Ej: Sevilla" required></td>
+                </tr>
+                <tr>
+                    <th><label for="pi_slug">Slug</label></th>
+                    <td><input type="text" id="pi_slug" name="pi_slug" class="regular-text" placeholder="Ej: sevilla" required>
+                    <p class="description">Minúsculas sin tildes, igual que el slug de la landing.</p></td>
+                </tr>
+                <tr>
+                    <th><label for="pi_url">URL Landing</label></th>
+                    <td><input type="url" id="pi_url" name="pi_url" class="large-text" placeholder="https://espectaculosluxury.com/stripper-sevilla/" required></td>
+                </tr>
+            </table>
+            <p style="margin-top:14px">
+                <button type="submit" class="button button-secondary">➕ Añadir al índice</button>
+            </p>
+        </form>
+
     </div>
     <?php
 }
@@ -219,6 +281,126 @@ function lux_builder_run_deployer( $post_data ) {
     require LUX_BUILDER_DIR . 'deployer.php';
     return ob_get_clean();
 }
+
+/* ─── Province index (lux_provinces_index) ────────────────────────────────── *
+ *
+ *  WP option 'lux_provinces_index' = array of:
+ *    [ 'name' => 'Barcelona', 'slug' => 'barcelona', 'url' => 'https://…/stripper-barcelona/' ]
+ *
+ *  Automatically populated every time the deployer runs.
+ *  Templates call lux_get_all_provinces() to render the "También actuamos" block.
+ * ─────────────────────────────────────────────────────────────────────────── */
+
+/**
+ * Register (or refresh) a province in the global index.
+ * Called from deployer.php after a successful landing deploy.
+ *
+ * @param string $name  Province display name, e.g. "Barcelona"
+ * @param string $slug  Province slug, e.g. "barcelona"
+ * @param string $url   Canonical landing URL (with trailing slash)
+ */
+function lux_register_province( $name, $slug, $url ) {
+    $index = get_option( 'lux_provinces_index', [] );
+    if ( ! is_array($index) ) { $index = []; }
+
+    // Update existing entry or add new
+    $found = false;
+    foreach ( $index as &$entry ) {
+        if ( $entry['slug'] === $slug ) {
+            $entry['name'] = $name;
+            $entry['url']  = $url;
+            $found = true;
+            break;
+        }
+    }
+    unset($entry);
+    if ( ! $found ) {
+        $index[] = [ 'name' => $name, 'slug' => $slug, 'url' => $url ];
+    }
+
+    // Sort alphabetically by name
+    usort( $index, fn($a,$b) => strcmp($a['name'], $b['name']) );
+
+    update_option( 'lux_provinces_index', $index, false );
+}
+
+/**
+ * Get all registered provinces as a sorted array.
+ * Returns: [ ['name'=>…, 'slug'=>…, 'url'=>…], … ]
+ * Falls back to the two provinces we know exist if option is empty.
+ */
+function lux_get_all_provinces() {
+    $index = get_option( 'lux_provinces_index', [] );
+    if ( ! is_array($index) || empty($index) ) {
+        // Fallback: hardcoded known provinces so the block is never empty
+        $site = function_exists('get_site_url') ? get_site_url() : 'https://espectaculosluxury.com';
+        $index = [
+            [ 'name' => 'Barcelona', 'slug' => 'barcelona', 'url' => $site . '/stripper-barcelona/' ],
+            [ 'name' => 'Madrid',    'slug' => 'madrid',    'url' => $site . '/stripper-madrid/'    ],
+        ];
+    }
+    return $index;
+}
+
+/**
+ * Generate the "También actuamos en otras ciudades" HTML block.
+ * Excludes the current province ($current_slug) from the list.
+ *
+ * @param string $current_slug  Slug of the current page's province (to exclude self-link)
+ * @param string $theme         'dark' | 'light'  (CTA bg dark = dark, product page = light)
+ * @return string HTML
+ */
+function lux_other_cities_block( $current_slug = '', $theme = 'dark' ) {
+    $provinces = lux_get_all_provinces();
+
+    // Filter out current province
+    $others = array_filter( $provinces, fn($p) => $p['slug'] !== $current_slug );
+    if ( empty($others) ) { return ''; }
+
+    if ( $theme === 'dark' ) {
+        // Over a dark CTA background
+        $wrap_style  = 'margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);text-align:center;';
+        $label_style = 'display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:14px;font-weight:600;';
+        $list_style  = 'display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center;';
+        $link_style  = 'color:rgba(255,255,255,.70);text-decoration:none;padding:6px 16px;border:1px solid rgba(255,255,255,.25);border-radius:20px;font-size:.80rem;transition:all .2s;';
+    } else {
+        // Light background (product pages)
+        $wrap_style  = 'margin-top:32px;padding:24px 20px;background:#f9f6f0;border-radius:12px;border:1px solid #e8e0d0;text-align:center;';
+        $label_style = 'display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#c8a96e;font-weight:700;margin-bottom:14px;';
+        $list_style  = 'display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center;';
+        $link_style  = 'color:#c8a96e;text-decoration:none;padding:6px 16px;border:1px solid #c8a96e;border-radius:20px;font-size:.80rem;';
+    }
+
+    $html  = '<div style="' . $wrap_style . '">';
+    $html .= '<span style="' . $label_style . '">🗺️ También actuamos en otras ciudades</span>';
+    $html .= '<div style="' . $list_style . '">';
+    foreach ( $others as $p ) {
+        $html .= '<a href="' . esc_url($p['url']) . '" style="' . $link_style . '" rel="nofollow">'
+               . esc_html($p['name']) . '</a>';
+    }
+    $html .= '</div></div>';
+    return $html;
+}
+
+/* ─── Admin page: Province Index panel ────────────────────────────────────── */
+add_action( 'admin_init', function () {
+    // Handle manual add/remove from the admin panel
+    if ( isset($_POST['lux_province_action']) && check_admin_referer('lux_province_index_action') ) {
+        if ( $_POST['lux_province_action'] === 'add' ) {
+            $name = sanitize_text_field( $_POST['pi_name'] ?? '' );
+            $slug = sanitize_title( $_POST['pi_slug'] ?? '' );
+            $url  = esc_url_raw( $_POST['pi_url']  ?? '' );
+            if ( $name && $slug && $url ) {
+                lux_register_province( $name, $slug, $url );
+            }
+        } elseif ( $_POST['lux_province_action'] === 'remove' ) {
+            $slug  = sanitize_title( $_POST['pi_slug_remove'] ?? '' );
+            $index = get_option( 'lux_provinces_index', [] );
+            $index = array_values( array_filter( $index, fn($p) => $p['slug'] !== $slug ) );
+            update_option( 'lux_provinces_index', $index, false );
+        }
+    }
+} );
 
 /* ─── Default localities JSON ─────────────────────────────────────────────── */
 function lux_builder_default_localities_json() {

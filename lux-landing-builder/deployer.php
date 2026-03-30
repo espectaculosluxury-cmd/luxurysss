@@ -175,6 +175,14 @@ if ( $landing_id && get_post($landing_id) ) {
     }
 }
 
+// ── Registrar provincia en el índice global "También actuamos" ───────────────
+if ( function_exists('lux_register_province') ) {
+    $site_url_dep  = get_site_url();
+    $landing_url_dep = $site_url_dep . '/stripper-' . $prov_slug . '/';
+    lux_register_province( $prov, $prov_slug, $landing_url_dep );
+    $log("  ✅ Provincia '{$prov}' registrada en índice global (lux_provinces_index)");
+}
+
 // ── Función helper upsert meta ───────────────────────────────────────────────
 function lux_upsert_meta($wpdb, $post_id, $key, $value) {
     $val = is_array($value) ? serialize($value) : $value;
@@ -381,6 +389,11 @@ $log("  DESPLIEGUE COMPLETADO — {$prov}");
 $log("  Landing: " . ($landing_id ? get_permalink($landing_id) : 'n/d'));
 $log("  Productos: " . count($localities));
 $log("  Errores: " . count($errors));
+if ( function_exists('lux_get_all_provinces') ) {
+    $idx = lux_get_all_provinces();
+    $idx_names = implode(', ', array_column($idx, 'name'));
+    $log("  Índice provincias (" . count($idx) . "): " . $idx_names);
+}
 $log("═══════════════════════════════════════════════════════\n");
 
 if ( ! empty($errors) ) {
